@@ -27,7 +27,7 @@ private:
     void drawLevel(juce::Graphics& g, const Channel& channel);
     void drawPeak(juce::Graphics& g, const Channel& channel);
 
-    inline int positionForLevel(float dbLevel) const noexcept
+    int positionForLevel(float dbLevel) const noexcept
     {
         return int(std::round(juce::jmap(dbLevel, maxdB, mindB, maxPos, minPos)));
     }
